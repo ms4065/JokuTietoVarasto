@@ -73,13 +73,18 @@ class Sankari:
         arvo_hurraus()
     """
 
+    HURRAUSSANAT = ("Jahuu!", "Hyvä vastustaja olit!", "Bam, Skadoosh ja voitto kotiin!")
+
+    
+
 
     def __init__(self, nimi):
         """arvoo rohkeuden ja hurrauksen voiman"""
 
         self.nimi = nimi
-        self.rohkeus = random.randint(4, 8)
-        self.katseen_voima = random.randint(2, 4)
+        self.rohkeus = random.randint(10, 20)
+        self.katseen_voima = random.randint(10, 20)
+
 
     def arvo_hurraus(self):
         """Palauttaa satunnaisen hurraushuudahduksen.
@@ -87,8 +92,9 @@ class Sankari:
         :return: hurraava huudahdus
         :rtype: str
         """
-        return self._arvo_sanat(self.RIEMUTAVUT, 8, " ", 0.7)
-
+        
+        return random.choice(self.HURRAUSSANAT)
+    
 
 def hurraa(olio):
     """Tulostaa satunnaisen hurrauksen annetulle oliolle.
