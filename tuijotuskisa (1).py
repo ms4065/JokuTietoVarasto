@@ -82,8 +82,8 @@ class Sankari:
         """arvoo rohkeuden ja hurrauksen voiman"""
 
         self.nimi = nimi
-        self.rohkeus = random.randint(10, 20)
-        self.katseen_voima = random.randint(10, 20)
+        self.rohkeus = random.randint(4, 9)
+        self.katseen_voima = random.randint(2, 4)
 
 
     def arvo_hurraus(self):
